@@ -29,6 +29,12 @@ public class Main {
             case 4:    
                 ex4();
                 break;
+            case 5:
+                ex5();
+                break;
+            default:
+                System.out.println("Выбрана не существующая задача");
+                break;
         }
         
     }
@@ -45,11 +51,15 @@ public class Main {
 
     public static void ex2(){
 
+        int sum = 0;
+        
         for(int i = 1; i <= 100; i++){
 
-            System.out.print(i + " ");
+            sum += i;
 
         }
+        
+        System.out.println(sum);
 
     }
 
@@ -83,4 +93,29 @@ public class Main {
         }
 
     }
+
+    public static void ex5(){
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int x = scan.nextInt();
+        
+        if(x%2==0) {
+            
+            for(int i = 2; i <= x; i+=2){
+                System.out.print(i + " ");
+            }
+            
+        }
+        else {
+            
+            for(int i = 1; i <= x; i+=2){
+                System.out.print(i + " ");
+            }
+            
+        }
+            
+
+    }
+    
 }
